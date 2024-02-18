@@ -10,9 +10,9 @@ app.use(express.json())
 
 app.set('view engine','ejs')
 
-const dbURI = `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@nodetuts.ugdrw6w.mongodb.net/node-auth`
+const dbURI = `mongodb+srv://node_authen:nodeauth62@nodetuts.ugdrw6w.mongodb.net/node-auth`
 mongoose.connect(dbURI)//retryWrites=true&w=majority {useNewUrlParser:true, useUnifiedTopology:true, useCreateIndex:true}
-.then((result) => app.listen(process.env.PORT))
+.then((result) => app.listen(3002))
 .catch((err) => console.log(err))
 
 app.use(authRoutes);
